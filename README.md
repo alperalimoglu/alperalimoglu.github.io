@@ -20,5 +20,4 @@ This is a single-page personal website for **Alper Alimoğlu**.
 
 ## Tech
 
-- Pure static HTML + CSS + JS — no build tools required.
-- Accessible, responsive, dark/light theme, schema.org metadata.
+- Pure static HTML + CSS — no build tools required.
