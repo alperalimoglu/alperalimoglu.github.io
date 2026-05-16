@@ -1,369 +1,373 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>Research - Alper Alimoglu</title>
-		<meta
-			name="description"
-			content="Research - Blockchain & Distributed Systems"
-		/>
-		<link rel="stylesheet" href="style.css" />
-		<style>
-			/* Research page specific styles */
-			body {
-				background: #fff;
-				color: #333;
-			}
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Research - Alper Alimoglu</title>
+    <meta
+      name="description"
+      content="Research - Blockchain & Distributed Systems"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      /* Research page specific styles */
+      body {
+        background: #fff;
+        color: #333;
+      }
 
-			.header {
-				background-color: #fff;
-				border-bottom: 1px solid #ddd;
-			}
+      .header {
+        background-color: #fff;
+        border-bottom: 1px solid #ddd;
+      }
 
-			.header-name {
-				color: #333;
-			}
+      .header-name {
+        color: #333;
+      }
 
-			.nav a {
-				color: #0066cc;
-				font-size: 1.1em;
-			}
+      .nav a {
+        color: #0066cc;
+        font-size: 1.1em;
+      }
 
-			.nav a:hover {
-				color: #004499;
-			}
+      .nav a:hover {
+        color: #004499;
+      }
 
-			.container {
-				background: #fff;
-				border-radius: 10px;
-				padding: 20px;
-				margin: 10px auto;
-				box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-			}
+      .container {
+        background: #fff;
+        border-radius: 10px;
+        padding: 20px;
+        margin: 10px auto;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
 
-			h1,
-			h2,
-			h3 {
-				color: #333;
-				margin: 0.5em 0;
-			}
+      h1,
+      h2,
+      h3 {
+        color: #333;
+        margin: 0.5em 0;
+      }
 
-			/* Make Key Research Areas heading black and bold */
-			.research-areas h3 {
-				color: #333 !important;
-				font-weight: bold !important;
-			}
+      /* Make Key Research Areas heading black and bold */
+      .research-areas h3 {
+        color: #333 !important;
+        font-weight: bold !important;
+      }
 
-			h1 {
-				font-size: 1.8em;
-			}
+      h1 {
+        font-size: 1.8em;
+      }
 
-			h2 {
-				font-size: 1.4em;
-			}
+      h2 {
+        font-size: 1.4em;
+      }
 
-			.publication-item {
-				background: #f8f9fa;
-				border-radius: 8px;
-				padding: 15px;
-				margin: 15px 0;
-				border-left: 3px solid #4caf50;
-				box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
-			}
+      .publication-item {
+        background: #f8f9fa;
+        border-radius: 8px;
+        padding: 15px;
+        margin: 15px 0;
+        border-left: 3px solid #4caf50;
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+      }
 
-			.publication-item h3 {
-				margin-bottom: 8px;
-				font-size: 1.1em;
-			}
+      .publication-item h3 {
+        margin-bottom: 8px;
+        font-size: 1.1em;
+      }
 
-			.publication-item h3 a {
-				color: #0066cc !important;
-				text-decoration: none;
-				font-weight: bold !important;
-			}
+      .publication-item h3 a {
+        color: #0066cc !important;
+        text-decoration: none;
+        font-weight: bold !important;
+      }
 
-			.publication-item h3 a:hover {
-				color: #004499 !important;
-				text-decoration: underline;
-			}
+      .publication-item h3 a:hover {
+        color: #004499 !important;
+        text-decoration: underline;
+      }
 
-			.publication-meta {
-				color: #666;
-				font-size: 0.85em;
-				margin-bottom: 8px;
-			}
+      .publication-meta {
+        color: #666;
+        font-size: 0.85em;
+        margin-bottom: 8px;
+      }
 
-			.publication-links {
-				margin-top: 8px;
-			}
+      .publication-links {
+        margin-top: 8px;
+      }
 
-			.publication-links a {
-				background: #4caf50;
-				color: #fff;
-				padding: 6px 12px;
-				border-radius: 15px;
-				text-decoration: none;
-				margin-right: 8px;
-				display: inline-block;
-				margin-bottom: 3px;
-				font-size: 0.85em;
-				transition: all 0.3s ease;
-			}
+      .publication-links a {
+        background: #4caf50;
+        color: #fff;
+        padding: 6px 12px;
+        border-radius: 15px;
+        text-decoration: none;
+        margin-right: 8px;
+        display: inline-block;
+        margin-bottom: 3px;
+        font-size: 0.85em;
+        transition: all 0.3s ease;
+      }
 
-			.publication-links a:hover {
-				background: #45a049;
-				transform: translateY(-1px);
-			}
+      .publication-links a:hover {
+        background: #45a049;
+        transform: translateY(-1px);
+      }
 
-			.research-areas {
-				display: grid;
-				grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-				gap: 15px;
-				margin: 20px 0;
-			}
+      .research-areas {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 15px;
+        margin: 20px 0;
+      }
 
-			.research-area {
-				background: #f8f9fa;
-				border-radius: 8px;
-				padding: 15px;
-				text-align: center;
-				box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
-			}
+      .research-area {
+        background: #f8f9fa;
+        border-radius: 8px;
+        padding: 15px;
+        text-align: center;
+        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+      }
 
-			.research-area h3 {
-				color: #4caf50;
-				margin-bottom: 10px;
-				font-size: 1.1em;
-			}
+      .research-area h3 {
+        color: #4caf50;
+        margin-bottom: 10px;
+        font-size: 1.1em;
+      }
 
-			.back-link {
-				display: inline-block;
-				background: #4caf50;
-				color: #fff;
-				padding: 8px 16px;
-				border-radius: 20px;
-				text-decoration: none;
-				margin-bottom: 15px;
-				font-size: 0.9em;
-				transition: all 0.3s ease;
-			}
+      .back-link {
+        display: inline-block;
+        background: #4caf50;
+        color: #fff;
+        padding: 8px 16px;
+        border-radius: 20px;
+        text-decoration: none;
+        margin-bottom: 15px;
+        font-size: 0.9em;
+        transition: all 0.3s ease;
+      }
 
-			.back-link:hover {
-				background: #45a049;
-				transform: translateY(-1px);
-			}
+      .back-link:hover {
+        background: #45a049;
+        transform: translateY(-1px);
+      }
 
-			p {
-				margin: 0.5em 0;
-				line-height: 1.4;
-			}
-		</style>
-	</head>
-	<body>
-		<header class="header">
-			<div class="header-content">
-				<h1 class="header-name">Alper Alimoglu</h1>
-				<nav class="nav">
-					<a href="home.html">Home</a>
-					<a href="experience.html">Experience</a>
-					<a href="research.html">Research</a>
-					<a href="education.html">Education</a>
-					<a href="honors.html">Honors</a>
-				</nav>
-			</div>
-		</header>
+      p {
+        margin: 0.5em 0;
+        line-height: 1.4;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-content">
+        <h1 class="header-name">Alper Alimoglu</h1>
+        <nav class="nav">
+          <a href="home.html">Home</a>
+          <a href="experience.html">Experience</a>
+          <a href="research.html">Research</a>
+          <a href="education.html">Education</a>
+          <a href="honors.html">Honors</a>
+        </nav>
+      </div>
+    </header>
 
-		<main class="container">
-			<h1>Publications</h1>
+    <main class="container">
+      <h1>Publications</h1>
 
-			<ul class="publication-list">
-				<li>
-					Alimoglu, A., Özturan, C. (2025).
-					<strong
-						>Blockchain Based Autonomous Organization for Sustainable Software
-						and Execution History</strong
-					>. <em>Blockchain: Research and Applications (ESCI Q1), May 2026</em>.
-					<div class="publication-description">
-						We propose a blockchain-based autonomous organization framework for
-						sustainable software development and execution history tracking.
-					</div>
-				</li>
+      <ul class="publication-list">
+        <li>
+          Alimoglu, A., Özturan, C. (2026).
+          <strong
+            ><a
+              href="https://www.sciencedirect.com/science/article/pii/S2096720926000552"
+              target="_blank"
+              rel="noreferrer"
+              >Blockchain Based Autonomous Organization for Sustainable Software
+              and Execution History</a
+            ></strong
+          >. <em>Blockchain: Research and Applications (ESCI Q1), May 2026</em>.
+          <div class="publication-description">
+            We propose a blockchain-based autonomous organization framework for
+            sustainable software development and execution history tracking.
+          </div>
+        </li>
 
-				<li>
-					Alimoglu, A., Erdayandi, K., Mustafa, M. A., Cali, Ü. (2025).
-					<strong
-						><a
-							href="https://arxiv.org/pdf/2507.01615"
-							target="_blank"
-							rel="noreferrer"
-							>EDGChain-E: A Decentralized Git-Based Framework for Versioning
-							Encrypted Energy Data</a
-						></strong
-					>. <em>arXiv preprint (accepted - in press)</em>.
-					<div class="publication-description">
-						A novel framework for versioning encrypted energy data using
-						decentralized Git-based systems with blockchain integration.
-					</div>
-				</li>
+        <li>
+          Alimoglu, A., Erdayandi, K., Mustafa, M. A., Cali, Ü. (2025).
+          <strong
+            ><a
+              href="https://ieeexplore.ieee.org/document/11466722"
+              target="_blank"
+              rel="noreferrer"
+              >EDGChain-E: A Decentralized Git-Based Framework for Versioning
+              Encrypted Energy Data</a
+            ></strong
+          >. <em>IEEE (2025)</em>.
+          <div class="publication-description">
+            A framework for versioning encrypted energy data using decentralized
+            Git and blockchain.
+          </div>
+        </li>
 
-				<li>
-					Alimoglu, A., Özturan, C. (2024).
-					<strong
-						><a
-							href="https://link.springer.com/article/10.1007/s10586-024-04534-z"
-							target="_blank"
-							rel="noreferrer"
-							>An Autonomous Blockchain-Based Workflow Execution Broker for
-							e-Science</a
-						></strong
-					>. <em>Cluster Computing, Springer (SCI-E Q1)</em>.
-					<div class="publication-description">
-						This paper presents a novel blockchain-based system for autonomous
-						workflow execution in e-Science environments, ensuring trust and
-						transparency in distributed computational processes.
-					</div>
-				</li>
+        <li>
+          Alimoglu, A., Özturan, C. (2024).
+          <strong
+            ><a
+              href="https://link.springer.com/article/10.1007/s10586-024-04534-z"
+              target="_blank"
+              rel="noreferrer"
+              >An Autonomous Blockchain-Based Workflow Execution Broker for
+              e-Science</a
+            ></strong
+          >. <em>Cluster Computing, Springer (SCI-E Q1)</em>.
+          <div class="publication-description">
+            A blockchain-based system for autonomous workflow execution in
+            e-Science, using smart contracts to coordinate distributed
+            processes.
+          </div>
+        </li>
 
-				<li>
-					Alimoglu, A., Özturan, C. (2024).
-					<strong
-						><a
-							href="https://doi.org/10.1002/cpe.8087"
-							target="_blank"
-							rel="noreferrer"
-							>An Autonomous Blockchain-Based Computational Broker for
-							e-Science</a
-						></strong
-					>.
-					<em
-						>Concurrency and Computation: Practice and Experience, Wiley (SCI-E
-						Q1)</em
-					>.
-					<div class="publication-description">
-						We introduce an autonomous computational broker that leverages
-						blockchain technology to manage and coordinate computational
-						resources in e-Science applications.
-					</div>
-				</li>
+        <li>
+          Alimoglu, A., Özturan, C. (2024).
+          <strong
+            ><a
+              href="https://doi.org/10.1002/cpe.8087"
+              target="_blank"
+              rel="noreferrer"
+              >An Autonomous Blockchain-Based Computational Broker for
+              e-Science</a
+            ></strong
+          >.
+          <em
+            >Concurrency and Computation: Practice and Experience, Wiley (SCI-E
+            Q1)</em
+          >.
+          <div class="publication-description">
+            An autonomous broker that uses blockchain to manage computational
+            resources for e-Science applications.
+          </div>
+        </li>
 
-				<li>
-					Alimoglu, A., Özturan, C. (2017).
-					<strong
-						><a
-							href="https://ieeexplore.ieee.org/document/8109181"
-							target="_blank"
-							rel="noreferrer"
-							>Design of a Smart Contract Based Autonomous Organization for
-							Sustainable Software</a
-						></strong
-					>. <em>IEEE 13th International Conference on e-Science</em>.
-					<div class="publication-description">
-						Early work on smart contract-based autonomous organizations for
-						sustainable software development and maintenance.
-					</div>
-				</li>
+        <li>
+          Alimoglu, A., Özturan, C. (2017).
+          <strong
+            ><a
+              href="https://ieeexplore.ieee.org/document/8109181"
+              target="_blank"
+              rel="noreferrer"
+              >Design of a Smart Contract Based Autonomous Organization for
+              Sustainable Software</a
+            ></strong
+          >. <em>IEEE 13th International Conference on e-Science</em>.
+          <div class="publication-description">
+            Early work on smart contract-based autonomous organizations for
+            sustainable software development and maintenance.
+          </div>
+        </li>
 
-				<li>
-					Shahriar Asta, Tuna Sonmez, Onuralp Ulusoy, Alper Alimoglu, Mustafa
-					Ersen, Ozdemir Sozmen, Sanem Sariel-Talay (2011).
-					<strong
-						><a
-							href="https://web.itu.edu.tr/sariel/publications/beeStanbul_TDP2011.pdf"
-							target="_blank"
-							rel="noreferrer"
-							>BeeStanbul Team Description Paper</a
-						></strong
-					>. <em>RoboCup Symposium Workshop, Istanbul</em>.
-					<div class="publication-description">
-						Team description paper for the BeeStanbul RoboCup team, showcasing
-						early work in robotics and AI.
-					</div>
-				</li>
-			</ul>
+        <li>
+          Shahriar Asta, Tuna Sonmez, Onuralp Ulusoy, Alper Alimoglu, Mustafa
+          Ersen, Ozdemir Sozmen, Sanem Sariel-Talay (2011).
+          <strong
+            ><a
+              href="https://web.itu.edu.tr/sariel/publications/beeStanbul_TDP2011.pdf"
+              target="_blank"
+              rel="noreferrer"
+              >BeeStanbul Team Description Paper</a
+            ></strong
+          >. <em>RoboCup Symposium Workshop, Istanbul</em>.
+          <div class="publication-description">
+            Team description paper for the BeeStanbul RoboCup team, showcasing
+            early work in robotics and AI.
+          </div>
+        </li>
+      </ul>
 
-			<h1>Theses</h1>
+      <h1>Theses</h1>
 
-			<ul class="thesis-list">
-				<li>
-					<strong
-						><a
-							href="https://www.dropbox.com/scl/fi/lhbjmslf6pao0cv0fvzuj/alper_alimoglu-phd-thesis.pdf?rlkey=uffv4ef8ccqvry55ii6p4iziv&dl=0"
-							target="_blank"
-							rel="noreferrer"
-							>Ph.D. Thesis: EBlocBroker: Blockchain-based Computational Broker
-							for e-Science</a
-						></strong
-					>
-					(2024, Boğaziçi University).
-					<div class="thesis-description">
-						<strong>Advisor:</strong> Prof. Can Özturan<br />
-						<strong>Abstract:</strong> Developed an autonomous blockchain-based
-						computational broker for e-Science applications, ensuring trust and
-						transparency in distributed computational processes through smart
-						contracts.<br />
-						<a
-							href="assets/phd_slides.pdf"
-							target="_blank"
-							rel="noreferrer"
-							class="thesis-link"
-							>PhD Defense Slides</a
-						>
-					</div>
-				</li>
+      <ul class="thesis-list">
+        <li>
+          <strong
+            ><a
+              href="https://www.dropbox.com/scl/fi/lhbjmslf6pao0cv0fvzuj/alper_alimoglu-phd-thesis.pdf?rlkey=uffv4ef8ccqvry55ii6p4iziv&dl=0"
+              target="_blank"
+              rel="noreferrer"
+              >Ph.D. Thesis: EBlocBroker: Blockchain-based Computational Broker
+              for e-Science</a
+            ></strong
+          >
+          (2024, Boğaziçi University).
+          <div class="thesis-description">
+            <strong>Advisor:</strong> Prof. Can Özturan<br />
+            <strong>Abstract:</strong> Developed an autonomous blockchain-based
+            computational broker for e-Science applications, ensuring trust and
+            transparency in distributed computational processes through smart
+            contracts.<br />
+            <a
+              href="assets/phd_slides.pdf"
+              target="_blank"
+              rel="noreferrer"
+              class="thesis-link"
+              >PhD Defense Slides</a
+            >
+          </div>
+        </li>
 
-				<li>
-					<strong
-						><a
-							href="https://www.dropbox.com/scl/fi/fv2ju3hvyrij3te9j6c5n/alper_alimoglu-master-thesis.pdf?rlkey=0dphs0xyvxpiygv9k81i8pzks&dl=0"
-							target="_blank"
-							rel="noreferrer"
-							>M.Sc. Thesis: Short-Term Workload Prediction with Reservoir
-							Computing</a
-						></strong
-					>
-					(2014, Binghamton University).
-					<div class="thesis-description">
-						<strong>Advisor:</strong> Prof. Kanad Ghose<br />
-						<strong>Abstract:</strong> Developed Echo State Network models for
-						time series prediction and workload forecasting in data centers,
-						focusing on reservoir computing approaches for distributed
-						systems.<br />
-						<a
-							href="assets/ms_slides.pdf"
-							target="_blank"
-							rel="noreferrer"
-							class="thesis-link"
-							>Master's Defense Slides</a
-						>
-					</div>
-				</li>
-			</ul>
+        <li>
+          <strong
+            ><a
+              href="https://www.dropbox.com/scl/fi/fv2ju3hvyrij3te9j6c5n/alper_alimoglu-master-thesis.pdf?rlkey=0dphs0xyvxpiygv9k81i8pzks&dl=0"
+              target="_blank"
+              rel="noreferrer"
+              >M.Sc. Thesis: Short-Term Workload Prediction with Reservoir
+              Computing</a
+            ></strong
+          >
+          (2014, Binghamton University).
+          <div class="thesis-description">
+            <strong>Advisor:</strong> Prof. Kanad Ghose<br />
+            <strong>Abstract:</strong> Developed Echo State Network models for
+            time series prediction and workload forecasting in data centers,
+            focusing on reservoir computing approaches for distributed
+            systems.<br />
+            <a
+              href="assets/ms_slides.pdf"
+              target="_blank"
+              rel="noreferrer"
+              class="thesis-link"
+              >Master's Defense Slides</a
+            >
+          </div>
+        </li>
+      </ul>
 
-			<h1>Research</h1>
+      <h1>Research</h1>
 
-			<p>
-				I develop autonomous blockchain-based computational brokers for
-				e-Science applications, ensuring trust and transparency in distributed
-				computational workflows through smart contracts.
-			</p>
+      <p>
+        I work on autonomous blockchain-based computational brokers for
+        e-Science — using smart contracts to coordinate distributed
+        computational workflows.
+      </p>
 
-			<ul class="research-areas-list">
-				<li>
-					• <strong>Blockchain Technology</strong> — Smart contracts,
-					distributed systems, computational brokers
-				</li>
+      <ul class="research-areas-list">
+        <li>
+          • <strong>Blockchain Technology</strong> — Smart contracts,
+          distributed systems, computational brokers
+        </li>
 
-				<li>
-					• <strong>e-Science Applications</strong> — Workflow management,
-					resource allocation, trust mechanisms
-				</li>
+        <li>
+          • <strong>e-Science Applications</strong> — Workflow management,
+          resource allocation, trust mechanisms
+        </li>
 
-				<li>
-					• <strong>Distributed Computing</strong> — Autonomous systems, load
-					balancing, performance optimization
-				</li>
-			</ul>
-		</main>
-	</body>
+        <li>
+          • <strong>Distributed Computing</strong> — Autonomous systems, load
+          balancing, performance optimization
+        </li>
+      </ul>
+    </main>
+  </body>
 </html>
