@@ -3,7 +3,7 @@
   var root = document.documentElement;
 
   function label(theme) {
-    return theme === "dark" ? "Light mode" : "Dark mode";
+    return theme === "dark" ? "☀" : "☾";
   }
 
   document.addEventListener("DOMContentLoaded", function () {
