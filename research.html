@@ -1,6 +1,9 @@
 <!doctype html>
 <html lang="en">
   <head>
+    <script>
+      document.documentElement.setAttribute("data-theme", localStorage.getItem("theme") || "dark");
+    </script>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Research - Alper Alimoglu</title>
@@ -9,49 +12,50 @@
       content="Research - Blockchain & Distributed Systems"
     />
     <link rel="stylesheet" href="style.css" />
+    <script src="theme.js" defer></script>
     <style>
       /* Research page specific styles */
       body {
-        background: #fff;
-        color: #333;
+        background: var(--color-bg);
+        color: var(--color-fg);
       }
 
       .header {
-        background-color: #fff;
-        border-bottom: 1px solid #ddd;
+        background-color: var(--color-bg);
+        border-bottom: 1px solid var(--color-border);
       }
 
       .header-name {
-        color: #333;
+        color: var(--color-heading);
       }
 
       .nav a {
-        color: #0066cc;
+        color: var(--color-link);
         font-size: 1.1em;
       }
 
       .nav a:hover {
-        color: #004499;
+        color: var(--color-link-hover);
       }
 
       .container {
-        background: #fff;
+        background: var(--color-bg);
         border-radius: 10px;
         padding: 20px;
         margin: 10px auto;
-        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 2px 8px var(--color-shadow);
       }
 
       h1,
       h2,
       h3 {
-        color: #333;
+        color: var(--color-heading);
         margin: 0.5em 0;
       }
 
-      /* Make Key Research Areas heading black and bold */
+      /* Make Key Research Areas heading match the heading color */
       .research-areas h3 {
-        color: #333 !important;
+        color: var(--color-heading) !important;
         font-weight: bold !important;
       }
 
@@ -64,12 +68,12 @@
       }
 
       .publication-item {
-        background: #f8f9fa;
+        background: var(--color-surface);
         border-radius: 8px;
         padding: 15px;
         margin: 15px 0;
-        border-left: 3px solid #4caf50;
-        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+        border-left: 3px solid var(--color-accent);
+        box-shadow: 0 1px 5px var(--color-shadow);
       }
 
       .publication-item h3 {
@@ -78,18 +82,18 @@
       }
 
       .publication-item h3 a {
-        color: #0066cc !important;
+        color: var(--color-link) !important;
         text-decoration: none;
         font-weight: bold !important;
       }
 
       .publication-item h3 a:hover {
-        color: #004499 !important;
+        color: var(--color-link-hover) !important;
         text-decoration: underline;
       }
 
       .publication-meta {
-        color: #666;
+        color: var(--color-muted);
         font-size: 0.85em;
         margin-bottom: 8px;
       }
@@ -99,8 +103,8 @@
       }
 
       .publication-links a {
-        background: #4caf50;
-        color: #fff;
+        background: var(--color-accent);
+        color: var(--color-accent-fg);
         padding: 6px 12px;
         border-radius: 15px;
         text-decoration: none;
@@ -112,7 +116,7 @@
       }
 
       .publication-links a:hover {
-        background: #45a049;
+        background: var(--color-accent-hover);
         transform: translateY(-1px);
       }
 
@@ -124,23 +128,23 @@
       }
 
       .research-area {
-        background: #f8f9fa;
+        background: var(--color-surface);
         border-radius: 8px;
         padding: 15px;
         text-align: center;
-        box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 1px 5px var(--color-shadow);
       }
 
       .research-area h3 {
-        color: #4caf50;
+        color: var(--color-accent);
         margin-bottom: 10px;
         font-size: 1.1em;
       }
 
       .back-link {
         display: inline-block;
-        background: #4caf50;
-        color: #fff;
+        background: var(--color-accent);
+        color: var(--color-accent-fg);
         padding: 8px 16px;
         border-radius: 20px;
         text-decoration: none;
@@ -150,7 +154,7 @@
       }
 
       .back-link:hover {
-        background: #45a049;
+        background: var(--color-accent-hover);
         transform: translateY(-1px);
       }
 
@@ -170,6 +174,7 @@
           <a href="research.html">Research</a>
           <a href="education.html">Education</a>
           <a href="honors.html">Honors</a>
+          <button id="theme-toggle" class="theme-toggle" type="button"></button>
         </nav>
       </div>
     </header>
@@ -280,13 +285,13 @@
             ></strong
           >. <em>RoboCup Symposium Workshop, Istanbul</em>.
           <div class="publication-description">
-            Team description paper for the BeeStanbul RoboCup team, showcasing
-            early work in robotics and AI.
+            Team description paper for the BeeStanbul RoboCup team, written
+            during early work in robotics and AI.
           </div>
         </li>
       </ul>
 
-      <h1>Theses</h1>
+      <h1>Thesis</h1>
 
       <ul class="thesis-list">
         <li>
@@ -303,9 +308,9 @@
           <div class="thesis-description">
             <strong>Advisor:</strong> Prof. Can Özturan<br />
             <strong>Abstract:</strong> Developed an autonomous blockchain-based
-            computational broker for e-Science applications, ensuring trust and
-            transparency in distributed computational processes through smart
-            contracts.<br />
+            computational broker for e-Science applications. It uses smart
+            contracts to ensure trust and transparency in distributed
+            computational processes.<br />
             <a
               href="assets/phd_slides.pdf"
               target="_blank"
@@ -331,8 +336,7 @@
             <strong>Advisor:</strong> Prof. Kanad Ghose<br />
             <strong>Abstract:</strong> Developed Echo State Network models for
             time series prediction and workload forecasting in data centers,
-            focusing on reservoir computing approaches for distributed
-            systems.<br />
+            using reservoir computing methods for distributed systems.<br />
             <a
               href="assets/ms_slides.pdf"
               target="_blank"
@@ -348,7 +352,7 @@
 
       <p>
         I work on autonomous blockchain-based computational brokers for
-        e-Science — using smart contracts to coordinate distributed
+        e-Science. These use smart contracts to coordinate distributed
         computational workflows.
       </p>
 

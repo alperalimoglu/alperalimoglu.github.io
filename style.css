@@ -1,5 +1,36 @@
 /* Academic Website Styles - Inspired by aahmetoglu.com */
 
+:root,
+html[data-theme="dark"] {
+    --color-bg: #282a36;
+    --color-surface: #44475a;
+    --color-fg: #f8f8f2;
+    --color-heading: #f8f8f2;
+    --color-muted: #6272a4;
+    --color-border: #6272a4;
+    --color-link: #8be9fd;
+    --color-link-hover: #ff79c6;
+    --color-accent: #bd93f9;
+    --color-accent-fg: #282a36;
+    --color-accent-hover: #ff79c6;
+    --color-shadow: rgba(0, 0, 0, 0.4);
+}
+
+html[data-theme="light"] {
+    --color-bg: #ffffff;
+    --color-surface: #f8f9fa;
+    --color-fg: #000000;
+    --color-heading: #000000;
+    --color-muted: #666666;
+    --color-border: #dddddd;
+    --color-link: #0066cc;
+    --color-link-hover: #004499;
+    --color-accent: #4caf50;
+    --color-accent-fg: #ffffff;
+    --color-accent-hover: #45a049;
+    --color-shadow: rgba(0, 0, 0, 0.1);
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -9,8 +40,8 @@
 body {
     font-family: 'Georgia', 'Times New Roman', serif;
     line-height: 1.6;
-    color: #000000;
-    background-color: #fff;
+    color: var(--color-fg);
+    background-color: var(--color-bg);
     max-width: 1000px;
     margin: 0 auto;
     padding: 20px 40px;
@@ -18,11 +49,11 @@ body {
 
 /* Header and Navigation */
 .header {
-    background-color: #fff;
-    color: #000000;
+    background-color: var(--color-bg);
+    color: var(--color-fg);
     padding: 20px 0;
     margin-bottom: 2em;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid var(--color-border);
 }
 
 .header-content {
@@ -38,44 +69,61 @@ body {
     font-size: 1.8em;
     font-weight: bold;
     margin: 0;
-    color: #333;
+    color: var(--color-heading);
 }
 
 .nav {
     display: flex;
     gap: 30px;
+    align-items: center;
 }
 
 .nav a {
-    color: #0066cc;
+    color: var(--color-link);
     text-decoration: underline;
     font-weight: normal;
     font-size: 1.1em;
 }
 
 .nav a:hover {
-    color: #004499;
+    color: var(--color-link-hover);
+}
+
+.theme-toggle {
+    background: none;
+    border: 1px solid var(--color-border);
+    color: var(--color-fg);
+    font-family: inherit;
+    font-size: 0.85em;
+    padding: 4px 10px;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+.theme-toggle:hover {
+    border-color: var(--color-accent);
+    color: var(--color-accent);
 }
 
 /* Main content */
 h1 {
     font-size: 2.2em;
     margin-bottom: 0.3em;
-    color: #000;
+    color: var(--color-heading);
     font-weight: normal;
 }
 
 h2 {
     font-size: 1.4em;
     margin: 2em 0 1em 0;
-    color: #000;
+    color: var(--color-heading);
     font-weight: normal;
 }
 
 h3 {
     font-size: 1.1em;
     margin: 1.5em 0 0.8em 0;
-    color: #000;
+    color: var(--color-heading);
     font-weight: normal;
 }
 
@@ -87,18 +135,18 @@ p {
 
 .subtitle {
     font-size: 1em;
-    color: #666;
+    color: var(--color-muted);
     margin-bottom: 1.5em;
     font-style: italic;
 }
 
 /* Email link styling in subtitle */
 .email-link {
-    color: #666666;
+    color: var(--color-muted);
 }
 
 .email-link:hover {
-    color: #4d4d4d;
+    color: var(--color-fg);
     text-decoration: underline;
 }
 
@@ -112,7 +160,7 @@ li {
 }
 
 a {
-    color: #0066cc;
+    color: var(--color-link);
     text-decoration: none;
 }
 
@@ -120,9 +168,9 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Make all headings and titles black and bold */
+/* Make all headings and titles consistent */
 h3, .experience-item h3, .education-item h3, .honor-item h3, .publication-item h3 {
-    color: #000000 !important;
+    color: var(--color-heading) !important;
     font-weight: bold !important;
 }
 
@@ -140,30 +188,30 @@ h3, .experience-item h3, .education-item h3, .honor-item h3, .publication-item h
 }
 
 .publication-list li strong a {
-    color: #0066cc;
+    color: var(--color-link);
     font-weight: bold;
     text-decoration: none;
 }
 
 .publication-list li strong a:hover {
-    color: #004499;
+    color: var(--color-link-hover);
     text-decoration: underline;
 }
 
 .publication-list li strong {
-    color: #000000;
+    color: var(--color-heading);
     font-weight: bold;
 }
 
 .publication-list li em {
     font-style: italic;
-    color: #000000;
+    color: var(--color-heading);
 }
 
 .publication-description {
     margin: 6px 0 0 20px;
     font-size: 0.9em;
-    color: #333;
+    color: var(--color-muted);
     line-height: 1.3;
     font-style: italic;
 }
@@ -194,18 +242,18 @@ h3, .experience-item h3, .education-item h3, .honor-item h3, .publication-item h
 .honor-list li strong,
 .thesis-list li strong,
 .research-areas-list li strong {
-    color: #000000 !important;
+    color: var(--color-heading) !important;
     font-weight: bold;
 }
 
-/* Ensure all strong elements in lists are black */
+/* Ensure all strong elements in lists match heading color */
 .experience-list strong,
 .education-list strong,
 .honor-list strong,
 .thesis-list strong,
 .research-areas-list strong,
 .publication-list strong {
-    color: #000000 !important;
+    color: var(--color-heading) !important;
     font-weight: bold;
 }
 
@@ -216,21 +264,21 @@ h3, .experience-item h3, .education-item h3, .honor-item h3, .publication-item h
 .research-area-description {
     margin: 6px 0 0 20px;
     font-size: 0.9em;
-    color: #333;
+    color: var(--color-muted);
     line-height: 1.3;
     font-style: italic;
 }
 
 .thesis-link,
 .talk-link {
-    color: #0066cc;
+    color: var(--color-link);
     text-decoration: none;
     font-weight: bold;
 }
 
 .thesis-link:hover,
 .talk-link:hover {
-    color: #004499;
+    color: var(--color-link-hover);
     text-decoration: underline;
 }
 
@@ -256,19 +304,20 @@ h3, .experience-item h3, .education-item h3, .honor-item h3, .publication-item h
     font-size: 0.85em;
     margin: 4px 0;
     line-height: 1.2;
+    color: var(--color-muted);
 }
 
 .publication-item h3 a {
-    color: #0066cc !important;
+    color: var(--color-link) !important;
     font-weight: bold !important;
 }
 
 .publication-item h3 a:hover {
-    color: #004499 !important;
+    color: var(--color-link-hover) !important;
 }
 
 .publication-item h3 {
-    color: #000000 !important;
+    color: var(--color-heading) !important;
     font-weight: bold !important;
 }
 
@@ -279,7 +328,7 @@ h3, .experience-item h3, .education-item h3, .honor-item h3, .publication-item h
 
 /* Section separators */
 h2 {
-    border-top: 1px solid #ddd;
+    border-top: 1px solid var(--color-border);
     padding-top: 20px;
     margin-top: 30px;
 }
@@ -301,7 +350,7 @@ h2:first-of-type {
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    border: 2px solid #0066cc;
+    border: 2px solid var(--color-link);
     flex-shrink: 0;
 }
 
@@ -325,9 +374,9 @@ h2:first-of-type {
 footer {
     margin-top: 3em;
     padding-top: 2em;
-    border-top: 1px solid #ddd;
+    border-top: 1px solid var(--color-border);
     text-align: center;
-    color: #666;
+    color: var(--color-muted);
     font-size: 0.9em;
 }
 
@@ -337,53 +386,53 @@ footer {
         padding: 10px;
         font-size: 14px;
     }
-    
+
     .container {
         padding: 15px;
         margin: 5px auto;
     }
-    
+
     .header-content {
         flex-direction: column;
         align-items: flex-start;
         gap: 15px;
         padding: 0 20px;
     }
-    
+
     .header-name {
         font-size: 1.5em;
         margin-bottom: 0;
     }
-    
+
     .nav {
         flex-direction: row;
         flex-wrap: wrap;
         gap: 15px;
         justify-content: flex-start;
     }
-    
+
     .nav a {
         font-size: 1em;
         padding: 5px 0;
     }
-    
+
     h1 {
         font-size: 1.8em;
     }
-    
+
     h2 {
         font-size: 1.3em;
     }
-    
+
     h3 {
         font-size: 1em;
     }
-    
+
     .subtitle {
         font-size: 0.9em;
         line-height: 1.4;
     }
-    
+
     .publication-item,
     .experience-item,
     .education-item,
@@ -391,12 +440,12 @@ footer {
         padding: 12px;
         margin: 12px 0;
     }
-    
+
     .research-areas {
         grid-template-columns: 1fr;
         gap: 10px;
     }
-    
+
     .publication-links a,
     .thesis-link,
     .talk-link {
@@ -410,36 +459,36 @@ footer {
     body {
         padding: 5px;
     }
-    
+
     .container {
         padding: 10px;
         margin: 2px auto;
     }
-    
+
     .header-content {
         padding: 0 10px;
     }
-    
+
     .nav {
         gap: 10px;
     }
-    
+
     .nav a {
         font-size: 0.9em;
     }
-    
+
     h1 {
         font-size: 1.6em;
     }
-    
+
     h2 {
         font-size: 1.2em;
     }
-    
+
     .subtitle {
         font-size: 0.85em;
     }
-    
+
     .publication-item,
     .experience-item,
     .education-item,
@@ -447,14 +496,14 @@ footer {
         padding: 10px;
         margin: 10px 0;
     }
-    
+
     .publication-meta,
     .experience-meta,
     .education-meta,
     .honor-meta {
         font-size: 0.8em;
     }
-    
+
     .header-avatar {
         width: 35px;
         height: 35px;

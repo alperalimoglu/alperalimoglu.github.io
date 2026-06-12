@@ -1,6 +1,9 @@
 <!doctype html>
 <html lang="en">
 	<head>
+		<script>
+			document.documentElement.setAttribute("data-theme", localStorage.getItem("theme") || "dark");
+		</script>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<title>Alper Alimoglu</title>
@@ -22,6 +25,7 @@
 			gtag("config", "G-WJQB259BSF");
 		</script>
 		<link rel="stylesheet" href="style.css" />
+		<script src="theme.js" defer></script>
 	</head>
 	<body>
 		<header class="header">
@@ -40,6 +44,7 @@
 					<a href="research.html">Research</a>
 					<a href="education.html">Education</a>
 					<a href="honors.html">Honors</a>
+					<button id="theme-toggle" class="theme-toggle" type="button"></button>
 				</nav>
 			</div>
 		</header>
@@ -78,20 +83,20 @@
 
 				<p>
 					My research is in blockchain technology and distributed systems.
-					Specifically, I work on autonomous blockchain-based computational brokers for e-Science — systems that use smart contracts to coordinate distributed computational workflows without a central authority.
-					The work spans smart contract design, workflow management, resource allocation, and performance optimization.
+					I work on autonomous blockchain-based computational brokers for e-Science: systems that use smart contracts to coordinate distributed computational workflows without a central authority.
+					That covers smart contract design, workflow management, resource allocation, and performance optimization.
 				</p>
 
 				<p>
 					I have published in Cluster Computing (Springer), Concurrency and Computation: Practice and Experience (Wiley), and IEEE conferences, and I review for several international venues.
-					I also contribute on Stack Overflow — over the years my answers have reached a large number of people.
+					I also answer questions on Stack Overflow, and quite a few of my answers have picked up views over the years.
 					I built <a href="https://github.com/ebloc/ebloc-broker" target="_blank" rel="noreferrer">eBlocBroker</a>, a blockchain-based autonomous computational resource broker for e-Science, which I worked on across multiple years and genuinely enjoyed.
 				</p>
 
 				<p>
-					<strong>Hobbies:</strong> I enjoy gaming and have spent hundreds of hours exploring various games on
+					<strong>Hobbies:</strong> I enjoy gaming and have spent hundreds of hours on
 					<a href="https://steamcommunity.com/profiles/76561198803169164/" target="_blank" rel="noreferrer">Steam</a>,
-					working through both the mechanics and the story of each game I pick up.
+					usually picking apart both the mechanics and the story of whatever I'm playing.
 				</p>
 
 				<p>

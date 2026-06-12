@@ -1,6 +1,9 @@
 <!doctype html>
 <html lang="en">
 	<head>
+		<script>
+			document.documentElement.setAttribute("data-theme", localStorage.getItem("theme") || "dark");
+		</script>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<title>Experience - Alper Alimoglu</title>
@@ -9,43 +12,44 @@
 			content="Experience - Blockchain & Distributed Systems"
 		/>
 		<link rel="stylesheet" href="style.css" />
+		<script src="theme.js" defer></script>
 		<style>
 			/* Experience page specific styles */
 			body {
-				background: #fff;
-				color: #333;
+				background: var(--color-bg);
+				color: var(--color-fg);
 			}
 
 			.header {
-				background-color: #fff;
-				border-bottom: 1px solid #ddd;
+				background-color: var(--color-bg);
+				border-bottom: 1px solid var(--color-border);
 			}
 
 			.header-name {
-				color: #333;
+				color: var(--color-heading);
 			}
 
 			.nav a {
-				color: #0066cc;
+				color: var(--color-link);
 				font-size: 1.1em;
 			}
 
 			.nav a:hover {
-				color: #004499;
+				color: var(--color-link-hover);
 			}
 
 			.container {
-				background: #fff;
+				background: var(--color-bg);
 				border-radius: 10px;
 				padding: 20px;
 				margin: 10px auto;
-				box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+				box-shadow: 0 2px 8px var(--color-shadow);
 			}
 
 			h1,
 			h2,
 			h3 {
-				color: #333;
+				color: var(--color-heading);
 				margin: 0.5em 0;
 			}
 
@@ -58,31 +62,31 @@
 			}
 
 			.experience-item {
-				background: #f8f9fa;
+				background: var(--color-surface);
 				border-radius: 8px;
 				padding: 15px;
 				margin: 15px 0;
-				border-left: 3px solid #4caf50;
-				box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+				border-left: 3px solid var(--color-accent);
+				box-shadow: 0 1px 5px var(--color-shadow);
 			}
 
 			.experience-item h3 {
-				color: #333 !important;
+				color: var(--color-heading) !important;
 				margin-bottom: 8px;
 				font-size: 1.1em;
 				font-weight: bold !important;
 			}
 
 			.experience-meta {
-				color: #666;
+				color: var(--color-muted);
 				font-size: 0.85em;
 				margin-bottom: 8px;
 			}
 
 			.back-link {
 				display: inline-block;
-				background: #4caf50;
-				color: #fff;
+				background: var(--color-accent);
+				color: var(--color-accent-fg);
 				padding: 8px 16px;
 				border-radius: 20px;
 				text-decoration: none;
@@ -92,7 +96,7 @@
 			}
 
 			.back-link:hover {
-				background: #45a049;
+				background: var(--color-accent-hover);
 				transform: translateY(-1px);
 			}
 
@@ -122,6 +126,7 @@
 					<a href="education.html">Education</a>
 					<a href="honors.html">Honors</a>
 					<!-- <a href="#" onclick="location.href='index.html#contact?' + Date.now(); return false;">Contact</a> -->
+					<button id="theme-toggle" class="theme-toggle" type="button"></button>
 				</nav>
 			</div>
 		</header>
