@@ -2,6 +2,7 @@
 
 :root,
 html[data-theme="dark"] {
+    color-scheme: dark;
     --color-bg: #282a36;
     --color-surface: #44475a;
     --color-fg: #f8f8f2;
@@ -17,6 +18,7 @@ html[data-theme="dark"] {
 }
 
 html[data-theme="light"] {
+    color-scheme: light;
     --color-bg: #ffffff;
     --color-surface: #f8f9fa;
     --color-fg: #000000;
@@ -35,6 +37,10 @@ html[data-theme="light"] {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+}
+
+html {
+    background-color: var(--color-bg);
 }
 
 body {
