@@ -20,6 +20,8 @@
     btn.addEventListener("click", function () {
       var next = root.getAttribute("data-theme") === "dark" ? "light" : "dark";
       root.setAttribute("data-theme", next);
+      root.style.colorScheme = next;
+      root.style.backgroundColor = next === "dark" ? "#282a36" : "#ffffff";
       localStorage.setItem(STORAGE_KEY, next);
       btn.innerHTML = icon(next);
     });
