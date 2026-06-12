@@ -94,9 +94,9 @@ body {
     border: 1px solid var(--color-border);
     color: var(--color-fg);
     font-family: inherit;
-    font-size: 0.85em;
-    padding: 4px 10px;
-    border-radius: 15px;
+    font-size: 0.75em;
+    padding: 2px 8px;
+    border-radius: 12px;
     cursor: pointer;
 }
 
