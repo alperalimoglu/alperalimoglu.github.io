@@ -203,8 +203,9 @@
               controls
               preload="metadata"
               poster="assets/video-poster.jpg"
-              src="assets/video.mp4#t=171"
+              src="assets/video.mp4"
               aria-label="Alimoglu maintained the highest grade-point average of any BU student-athlete with his 3.98 GPA in computer science."
+              onplay="if (!this.dataset.seeked) { this.dataset.seeked = 1; this.currentTime = 171; }"
             >
               Your browser does not support the video tag.
             </video>
