@@ -1,251 +1,242 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<script>
-			(function () {
-				var theme = localStorage.getItem("theme") || "dark";
-				var html = document.documentElement;
-				html.setAttribute("data-theme", theme);
-				html.style.colorScheme = theme;
-				html.style.backgroundColor = theme === "dark" ? "#282a36" : "#ffffff";
-			})();
-		</script>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<title>Honors & Awards - Alper Alimoglu</title>
-		<meta
-			name="description"
-			content="Honors & Awards - Blockchain & Distributed Systems"
-		/>
-		<link rel="stylesheet" href="style.css" />
-		<script src="theme.js" defer></script>
-		<style>
-			/* Honors page specific styles */
-			body {
-				background: var(--color-bg);
-				color: var(--color-fg);
-			}
+  <head>
+    <script>
+      (function () {
+        var theme = localStorage.getItem("theme") || "dark";
+        var html = document.documentElement;
+        html.setAttribute("data-theme", theme);
+        html.style.colorScheme = theme;
+        html.style.backgroundColor = theme === "dark" ? "#282a36" : "#ffffff";
+      })();
+    </script>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Honors & Awards - Alper Alimoglu</title>
+    <meta
+      name="description"
+      content="Honors & Awards - Blockchain & Distributed Systems"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="theme.js" defer></script>
+    <style>
+      /* Honors page specific styles */
+      body {
+        background: var(--color-bg);
+        color: var(--color-fg);
+      }
 
-			.header {
-				background-color: var(--color-bg);
-				border-bottom: 1px solid var(--color-border);
-			}
+      .header {
+        background-color: var(--color-bg);
+        border-bottom: 1px solid var(--color-border);
+      }
 
-			.header-name {
-				color: var(--color-heading);
-			}
+      .header-name {
+        color: var(--color-heading);
+      }
 
-			.nav a {
-				color: var(--color-link);
-				font-size: 1.1em;
-			}
+      .nav a {
+        color: var(--color-link);
+        font-size: 1.1em;
+      }
 
-			.nav a:hover {
-				color: var(--color-link-hover);
-			}
+      .nav a:hover {
+        color: var(--color-link-hover);
+      }
 
-			.container {
-				background: var(--color-bg);
-				border-radius: 10px;
-				padding: 20px;
-				margin: 10px auto;
-				box-shadow: 0 2px 8px var(--color-shadow);
-			}
+      .container {
+        background: var(--color-bg);
+        border-radius: 10px;
+        padding: 20px;
+        margin: 10px auto;
+        box-shadow: 0 2px 8px var(--color-shadow);
+      }
 
-			h1,
-			h2,
-			h3 {
-				color: var(--color-heading);
-				margin: 0.5em 0;
-			}
+      h1,
+      h2,
+      h3 {
+        color: var(--color-heading);
+        margin: 0.5em 0;
+      }
 
-			h1 {
-				font-size: 1.8em;
-			}
+      h1 {
+        font-size: 1.8em;
+      }
 
-			h2 {
-				font-size: 1.4em;
-			}
+      h2 {
+        font-size: 1.4em;
+      }
 
-			.honor-item {
-				background: var(--color-surface);
-				border-radius: 8px;
-				padding: 15px;
-				margin: 15px 0;
-				border-left: 3px solid var(--color-accent);
-				box-shadow: 0 1px 5px var(--color-shadow);
-			}
+      .honor-item {
+        background: var(--color-surface);
+        border-radius: 8px;
+        padding: 15px;
+        margin: 15px 0;
+        border-left: 3px solid var(--color-accent);
+        box-shadow: 0 1px 5px var(--color-shadow);
+      }
 
-			.honor-item h3 {
-				color: var(--color-heading) !important;
-				margin-bottom: 8px;
-				font-size: 1.1em;
-				font-weight: bold !important;
-			}
+      .honor-item h3 {
+        color: var(--color-heading) !important;
+        margin-bottom: 8px;
+        font-size: 1.1em;
+        font-weight: bold !important;
+      }
 
-			.honor-meta {
-				color: var(--color-muted);
-				font-size: 0.85em;
-				margin-bottom: 8px;
-			}
+      .honor-meta {
+        color: var(--color-muted);
+        font-size: 0.85em;
+        margin-bottom: 8px;
+      }
 
-			.talk-link {
-				display: inline-block;
-				background: var(--color-accent);
-				color: var(--color-accent-fg);
-				padding: 6px 12px;
-				border-radius: 15px;
-				text-decoration: none;
-				margin-top: 8px;
-				font-size: 0.85em;
-				transition: all 0.3s ease;
-			}
+      .talk-link {
+        display: inline-block;
+        background: var(--color-accent);
+        color: var(--color-accent-fg);
+        padding: 6px 12px;
+        border-radius: 15px;
+        text-decoration: none;
+        margin-top: 8px;
+        font-size: 0.85em;
+        transition: all 0.3s ease;
+      }
 
-			.talk-link:hover {
-				background: var(--color-accent-hover);
-				transform: translateY(-1px);
-			}
+      .talk-link:hover {
+        background: var(--color-accent-hover);
+        transform: translateY(-1px);
+      }
 
-			.honor-video {
-				margin: 10px 0 0;
-			}
+      .honor-video {
+        margin: 10px 0 0;
+      }
 
-			.honor-video video {
-				width: 100%;
-				max-width: 480px;
-				border-radius: 8px;
-				display: block;
-			}
+      .honor-video video {
+        width: 100%;
+        max-width: 480px;
+        border-radius: 8px;
+        display: block;
+      }
 
-			.honor-video figcaption {
-				color: var(--color-muted);
-				font-size: 0.85em;
-				margin-top: 6px;
-			}
+      .honor-video figcaption {
+        color: var(--color-muted);
+        font-size: 0.85em;
+        margin-top: 6px;
+      }
 
-			.back-link {
-				display: inline-block;
-				background: var(--color-accent);
-				color: var(--color-accent-fg);
-				padding: 8px 16px;
-				border-radius: 20px;
-				text-decoration: none;
-				margin-bottom: 15px;
-				font-size: 0.9em;
-				transition: all 0.3s ease;
-			}
+      .back-link {
+        display: inline-block;
+        background: var(--color-accent);
+        color: var(--color-accent-fg);
+        padding: 8px 16px;
+        border-radius: 20px;
+        text-decoration: none;
+        margin-bottom: 15px;
+        font-size: 0.9em;
+        transition: all 0.3s ease;
+      }
 
-			.back-link:hover {
-				background: var(--color-accent-hover);
-				transform: translateY(-1px);
-			}
+      .back-link:hover {
+        background: var(--color-accent-hover);
+        transform: translateY(-1px);
+      }
 
-			p {
-				margin: 0.5em 0;
-				line-height: 1.4;
-			}
+      p {
+        margin: 0.5em 0;
+        line-height: 1.4;
+      }
 
-			ul {
-				margin: 0.5em 0;
-				padding-left: 1.5em;
-			}
+      ul {
+        margin: 0.5em 0;
+        padding-left: 1.5em;
+      }
 
-			li {
-				margin-bottom: 0.3em;
-			}
-		</style>
-	</head>
-	<body>
-		<header class="header">
-			<div class="header-content">
-				<h1 class="header-name">Alper Alimoglu</h1>
-				<nav class="nav">
-				<a href="home.html">Home</a>
-				<a href="experience.html">Experience</a>
-				<a href="research.html">Research</a>
-				<a href="education.html">Education</a>
-				<a href="honors.html">Honors</a>
-				<button id="theme-toggle" class="theme-toggle" type="button"></button>
-				</nav>
-			</div>
-		</header>
+      li {
+        margin-bottom: 0.3em;
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <div class="header-content">
+        <h1 class="header-name">Alper Alimoglu</h1>
+        <nav class="nav">
+          <a href="home.html">Home</a>
+          <a href="experience.html">Experience</a>
+          <a href="research.html">Research</a>
+          <a href="education.html">Education</a>
+          <a href="honors.html">Honors</a>
+          <button id="theme-toggle" class="theme-toggle" type="button"></button>
+        </nav>
+      </div>
+    </header>
 
-		<main class="container">
-			<h1>Honors & Awards</h1>
+    <main class="container">
+      <h1>Honors & Awards</h1>
 
-			<ul class="honor-list">
-				<li>
-					<strong>Valedictorian</strong> (2014 - Binghamton University Graduate
-					Commencement).
-					<div class="honor-description">
-						Selected as valedictorian for the graduate commencement ceremony at
-						Binghamton University.
-						<a
-							href="https://youtu.be/maedbkej300?si=e2GQSnkXSdlS-yTM"
-							target="_blank"
-							rel="noreferrer"
-							class="talk-link"
-							>Watch Speech</a
-						>
-					</div>
-				</li>
+      <ul class="honor-list">
+        <li>
+          <strong>Valedictorian</strong> (2014 - Binghamton University Graduate
+          Commencement).
+          <div class="honor-description">
+            Selected as valedictorian for the graduate commencement ceremony at
+            Binghamton University.
+            <a
+              href="https://youtu.be/maedbkej300?si=e2GQSnkXSdlS-yTM"
+              target="_blank"
+              rel="noreferrer"
+              class="talk-link"
+              >Watch Speech</a
+            >
+          </div>
+        </li>
 
-				<li>
-					<strong>Academic Achievement Award</strong> (2012).
-					<div class="honor-description">
-						Received for maintaining a 3.98 GPA as a student-athlete — the highest among BU student-athletes.
-					</div>
+        <li>
+          <strong>Academic Achievement Award</strong> (2012).
 
-					<div class="honor-description">
-						Alimoglu maintained the highest grade-point average of any BU
-						student-athlete with his 3.98 GPA in computer science.
-						<a
-							href="https://youtu.be/dgOml-blbwI?si=FZrzUUKDQCcklZFP&t=171"
-							target="_blank"
-							rel="noreferrer"
-							class="talk-link"
-							>Watch</a
-						>
-					</div>
+          <div class="honor-description">
+            Alimoglu maintained the highest grade-point average of any BU
+            student-athlete with his 3.98 GPA in computer science.
+          </div>
 
-					<figure class="honor-video">
-						<video
-							controls
-							preload="metadata"
-							src="assets/video.mp4#t=171"
-							aria-label="Alimoglu maintained the highest grade-point average of any BU student-athlete with his 3.98 GPA in Computer Science."
-						>
-							Your browser does not support the video tag.
-						</video>
-						<figcaption>
-							Alimoglu maintained the highest grade-point average of any BU
-							student-athlete with his 3.98 GPA in Computer Science.
-						</figcaption>
-					</figure>
-				</li>
+          <figure class="honor-video">
+            <video
+              controls
+              preload="metadata"
+              src="assets/video.mp4#t=171"
+              aria-label="Alimoglu maintained the highest grade-point average of any BU student-athlete with his 3.98 GPA in computer science."
+            >
+              Your browser does not support the video tag.
+            </video>
+            <figcaption>
+              Alimoglu maintained the highest grade-point average of any BU
+              student-athlete with his 3.98 GPA in Computer Science.
+            </figcaption>
+          </figure>
+        </li>
 
-				<li>
-					<strong>Summa Cum Laude</strong> (2012 - B.Sc. Information Systems).
-					<div class="honor-description">
-						Graduated with highest honors from the dual degree program between
-						SUNY Binghamton and Istanbul Technical University.
-					</div>
-				</li>
+        <li>
+          <strong>Summa Cum Laude</strong> (2012 - B.Sc. Information Systems).
+          <div class="honor-description">
+            Graduated with highest honors from the dual degree program between
+            SUNY Binghamton and Istanbul Technical University.
+          </div>
+        </li>
 
-				<li>
-					<strong>Dean's List</strong> (Multiple semesters).
-					<div class="honor-description">
-						Multiple semesters at Binghamton University.
-					</div>
-				</li>
+        <li>
+          <strong>Dean's List</strong> (Multiple semesters).
+          <div class="honor-description">
+            Multiple semesters at Binghamton University.
+          </div>
+        </li>
 
-				<li>
-					<strong>Cisco University Prize</strong> (2010).
-					<div class="honor-description">
-						Received the Cisco University Prize for research work during an internship.
-					</div>
-				</li>
-			</ul>
-		</main>
-	</body>
+        <li>
+          <strong>Cisco University Prize</strong> (2010).
+          <div class="honor-description">
+            Received the Cisco University Prize for research work during an
+            internship.
+          </div>
+        </li>
+      </ul>
+    </main>
+  </body>
 </html>
